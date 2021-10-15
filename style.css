@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white none; color: black;
+    font-family: 'Indie Flower', Arial, Helvetica, sans-serif;
+    overflow: hidden; /* Piilottaa scroll barin - pois kaytosta */
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0rem;
+}
+h2{
+    font-size: 2.5em;
+    margin: 0.5em;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight:100;
+    font-style:italic;
+}
+
+
+.osiot {
+    width: 100%;
+    height: 100%;
+    /* Sivujen vieritys alaspain */
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+section {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100%;
+    }
+#yksi {
+    background: white;
+}
+#kaksi {
+    background: white;
+}
+#kolme {
+    background: white;
+}
+#nelja {
+    background: white;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 90px;
+    background: gainsboro;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+nav .valikko {
+    display: flex;
+    list-style: none;
+}
+nav .valikko li a {
+    display: inline-block;
+    font-size: 2em;
+    padding: 1em;
+    text-decoration: none;
+    text-transform: none; /* uppercase */
+    color:black;
+}
+nav .valikko li a:hover {
+    background:whitesmoke;
+    /* hover ominaisuuksia */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-radius: 10px;
+}
+nav .valikkoAuki {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+nav .valikko .valikkoKiinni, .icons i {
+    font-size: 2em;
+    display: none;
+    cursor: pointer;
+}
+.fa-times:hover {color: rgb(210, 0, 0)}
+.fa-facebook:hover {color: rgb(0, 110, 255)}
+.fa-github:hover {color: rgb(255, 123, 0)}
+.fa-instagram:hover {color: rgb(255, 0, 191)}
+.fa-twitter:hover {color:rgb(86, 154, 243) }
+.fa-youtube:hover {color:rgb(255, 0, 0) }
+.fa-heart:hover {color:rgb(255, 0, 0) }
+
+nav .logo {
+    display: flex;
+    margin: 6px;
+    cursor: pointer;
+}
+
+/* Sovitetaan kuva ruudun koon mukaan */
+.kuva {
+    max-width: 100%;
+    border-radius: 100px;
+}
+
+.nappula {
+    background:darkgrey;
+    font-size: 1.5em;
+    width: 8em;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    color: black;
+    border-radius: 5px;
+    cursor: pointer; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+.nappula .a .i {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+.nappula:hover, .nappula:focus, .nappula:active {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/* Sivun alaosa */
+.some {
+    background: white;
+    color: black;
+    padding: 2em;
+    text-align: center;
+}
+.some .icons i {
+    display: inline-block;
+    padding: 5px;
+    font-size: 3rem;
+} 
+
+
+.contact {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    padding: 2em;
+    text-align: center;
+}
+
+
+@media(max-width: 800px) {
+    nav .valikko {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .valikko .valikkoKiinni {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .valikkoAuki {
+        display: block;
+    }
+    nav .valikko li a:hover {
+        background: none;
+        color:slategray;
+        font-size: 1.6rem;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+}
