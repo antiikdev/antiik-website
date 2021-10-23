@@ -16,7 +16,7 @@ h1 {
     margin: 0rem;
 }
 h2{
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0.5em;
 }
 
@@ -101,13 +101,23 @@ nav .valikko .valikkoKiinni, .icons i {
     display: none;
     cursor: pointer;
 }
+
+.fa-facebook {color: rgb(0, 0, 0)}
+.fa-github {color: rgb(0, 0, 0)}
+.fa-instagram {color: rgb(0, 0, 0)}
+.fa-twitter {color:rgb(0, 0, 0) }
+.fa-youtube {color:rgb(0, 0, 0) }
+.fa-heart {color:rgb(0, 0, 0) }
+.fa-spotify {color: rgb(0, 0, 0)}
+
 .fa-times:hover {color: rgb(210, 0, 0)}
 .fa-facebook:hover {color: rgb(0, 110, 255)}
-.fa-github:hover {color: rgb(255, 123, 0)}
+.fa-github:hover {color: rgb(243, 79, 41)}
 .fa-instagram:hover {color: rgb(255, 0, 191)}
 .fa-twitter:hover {color:rgb(86, 154, 243) }
 .fa-youtube:hover {color:rgb(255, 0, 0) }
 .fa-heart:hover {color:rgb(255, 0, 0) }
+.fa-spotify:hover {color: rgb(30, 215, 96)}
 
 nav .logo {
     display: flex;
@@ -150,8 +160,19 @@ nav .logo {
     transform: scale(1.1);
 }
 
+/* Code */
+.code-links {
+    font-size: 3.5rem;
+}
 
-/* Sivun alaosa */
+
+/* Music */
+.music-links {
+    font-size: 3.5rem;
+}
+
+
+/* Bottom of the page */
 .some {
     background: white;
     color: black;
@@ -163,8 +184,6 @@ nav .logo {
     padding: 5px;
     font-size: 3rem;
 } 
-
-
 .contact {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
